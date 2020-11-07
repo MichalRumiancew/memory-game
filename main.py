@@ -1,16 +1,18 @@
 import random
 
-letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V',
-           'W', 'X', 'Y', 'Z']
+
 
 
 def get_list_of_letter(size):
+    letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U',
+               'V','W', 'X', 'Y', 'Z']
     list_of_letter = []
 
     while size // 2 > len():
         letter = random.choice(letters)
         list_of_letter.append(letter)
         list_of_letter.append(letter)
+        letters.pop(letter)
 
     random.shuffle(list_of_letter)
 
